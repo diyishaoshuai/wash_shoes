@@ -1,0 +1,10 @@
+{
+    "component": true,
+    "usingComponents": {
+        "num-input": "num-input",
+        "SearchBar":"/components/SearchBar/SearchBar"
+
+    },
+    "navigationBarTitleText": "智慧洗鞋平台-首页"
+
+}

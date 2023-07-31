@@ -1,0 +1,66 @@
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+.value-button-decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+.value-button-increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+.num-input {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 60px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.num-input::-webkit-inner-spin-button,
+.num-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.num-input-s .value-button {
+  height: 12px;
+}
+.num-input-s .num-input {
+  height: 32px;
+}
+
+.num-input-l .value-button {
+  height: 30px;
+  line-height: 30px;
+}
+.num-input-l .num-input {
+  height: 50px;
+  width: 100px;
+}

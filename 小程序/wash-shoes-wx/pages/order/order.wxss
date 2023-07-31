@@ -1,0 +1,23 @@
+/* pages/order/order.wxss */
+.orderTopNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.order_content{
+    height: 230rpx;
+    /* border: 1rpx solid; */
+    border-radius: 20rpx;
+    margin: 20rpx;
+    background-color: #f6f6f6;
+    padding: 20rpx;
+}
+/* 分享按钮 */
+.share{
+    background-color: #43DBD1;
+    color: white;
+    border-radius: 50rpx;
+    margin-right: 40rpx;
+    margin-top: 10rpx;
+}

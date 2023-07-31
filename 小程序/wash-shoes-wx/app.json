@@ -1,0 +1,47 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/order/order",
+        "pages/my/my",
+        "pages/shoppingCart/shoppingCart"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "智慧洗鞋平台",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "custom": false,
+        "selectedColor": "#99ddcc",
+        "backgroundColor": "#fafafa",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/img/icon_index.png",
+                "selectedIconPath": "/img/icon_indexST.png"
+            },
+            {
+                "pagePath": "pages/order/order",
+                "text": "订单",
+                "iconPath": "/img/icon_order.png",
+                "selectedIconPath": "/img/icon_orderST.png"
+            },
+            {
+                "pagePath": "pages/shoppingCart/shoppingCart",
+                "text": "购物车",
+                "iconPath": "/img/icon_shoppingCart.png",
+                "selectedIconPath": "/img/icon_shoppingCartST.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "/img/icon_my.png",
+                "selectedIconPath": "/img/icon_myST.png"
+            }
+        ]
+    }
+}

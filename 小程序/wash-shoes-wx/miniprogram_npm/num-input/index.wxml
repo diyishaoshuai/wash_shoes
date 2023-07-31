@@ -1,0 +1,22 @@
+<view class="num-input-wrap num-input-{{ size }}">
+  <view
+    class="value-button value-button-decrease ext-class-decrease"
+    bindtap="onDecrease"
+  >
+    -
+  </view>
+  <input
+    class="weui-input num-input ext-class-input"
+    type="digit"
+    disabled="{{ disabled }}"
+    value="{{ num }}"
+    placeholder="{{ placeholder }}"
+    bindinput="onInput"
+  />
+  <view
+    class="value-button value-button-increase ext-class-increase"
+    bindtap="onIncrease"
+  >
+    +
+  </view>
+</view>

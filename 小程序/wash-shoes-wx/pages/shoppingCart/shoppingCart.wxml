@@ -1,0 +1,47 @@
+<view class="cart-box">
+    <!-- wx:for 渲染购物车列表 -->
+    <view wx:for="{{carts}}" wx:key="id" class="cartList">
+
+        <!-- wx:if 是否选择显示不同图标 -->
+        <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}" />
+
+        <!-- 点击商品图片可跳转到商品详情 -->
+        <!-- <navigator url="../details/details?id={{item.id}}"> -->
+        <view class="cartImg">
+            <image src="{{item.image}}" mode="widthFix"></image>
+        </view>
+        <!-- </navigator> -->
+        <view class="cartText">
+            <text>{{item.title}}</text>
+            <text style="color: red;">￥{{item.price}}</text>
+        </view>
+        <!-- 增加减少数量按钮 -->
+        <view class="cartBtns">
+            <view bindtap="minusCount" data-index="{{index}}" class="changeNumBtn">-</view>
+            <view style="width: 50rpx;text-align: center;">{{item.num}}</view>
+            <view class="changeNumBtn" bindtap="addCount" data-index="{{index}}">+</view>
+        </view>
+
+        <!-- 删除按钮 -->
+        <view class="deleteBtn" bindtap="deleteList" data-index="{{index}}">
+            <image src="/img/icon_shoppingCart_delete.png" mode="widthFix" alt="" />
+        </view>
+    </view>
+</view>
+
+<!-- 底部操作栏 -->
+<view class="cartFooter">
+    <view class="selectedBtn">
+        <!-- wx:if 是否全选显示不同图标 -->
+        <view class="selected" wx:if="{{selectAllStatus}}" bindtap="selectAll">
+            <image src="/img/icon_shoppingCart_selected.png" mode="widthFix" />
+        </view>
+        <view class="selected" wx:else bindtap="selectAll">
+            <image src="/img/icon_shoppingCart_notSelected.png" mode="widthFix" />
+        </view>
+        <text>全选</text>
+    </view>
+    <!-- 总价 -->
+    <view class="totalPrice">￥{{totalPrice}}</view>
+</view>

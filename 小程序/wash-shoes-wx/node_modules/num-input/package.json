@@ -1,0 +1,7 @@
+{
+  "name": "num-input",
+  "version": "1.0.6",
+  "repository": "https://github.com/wayou/num-input",
+  "miniprogram": ".",
+  "description": "微信小程序自定义组件带加减的数字输入框"
+}

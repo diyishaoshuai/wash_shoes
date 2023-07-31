@@ -1,0 +1,100 @@
+/**index.wxss**/
+swiper{
+    width: 100%;
+    height: calc(100vw*442/810);
+}
+
+.indexListContentImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+image{
+    width: 100%;
+    /* height: 100%; */
+
+}
+/* 主页列表 */
+.indexList{
+    border: 1rpx solid;
+    width: 100%;
+    height: 100%;
+    padding: 20rpx;
+    margin-top: 20rpx;
+}
+.indexListContent{
+    /* border: 1rpx solid; */
+    width: 95%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+    background-color: #fff4f4;
+    margin: 15rpx 0;
+    box-shadow: 0 12px 5px -10px rgba(0,0,0,0.1), 0 0 4px 0 rgba(0,0,0,0.1);
+    border-radius: 10rpx;
+}
+.indexListContentImg{
+    /* border:1rpx solid; */
+    height: 200rpx;
+    width: 200rpx;
+}
+
+.indexListContentImgContent{
+    height: 200rpx;
+    width: 200rpx;
+}
+
+.indexListRight{
+    /* border:1rpx solid; */
+    height: 200rpx;
+    width: 200rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.indexListRightShosesPriceForVip{
+    color: red;
+}
+/* 加减按钮 */
+.indexListBtns{
+    /* border:1rpx solid; */
+    height: 50rpx;
+    width: 200rpx;
+    margin-top:120rpx ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.numSubBtn{
+    /* border: 1rpx solid; */
+    border-radius: 50rpx;
+    width: 50rpx;
+    height: 50rpx;
+    line-height: 15rpx;
+    text-align: center;
+    background-color: #bad7df;
+}
+.numSubBtn:active{
+    background-color: rgb(2, 110, 110);
+}
+.numaddBtn:active{
+    background-color: rgb(2, 110, 110);
+}
+.numaddBtn{
+    /* border: 1rpx solid; */
+    border-radius: 50rpx;
+    width: 50rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    background-color: #bad7df;
+}
+.showNumBox{
+    /* border: 1rpx solid; */
+    width: 50rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+}

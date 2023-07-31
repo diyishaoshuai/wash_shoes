@@ -1,0 +1,14 @@
+/**app.wxss**/
+page{
+/* 字体大小 */
+    font-size: 28rpx;
+}
+
+body{
+    background-color: #f6f6f6;
+}
+
+.container {
+
+} 
+

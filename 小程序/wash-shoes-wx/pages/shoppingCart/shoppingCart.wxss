@@ -1,0 +1,85 @@
+/* pages/shoppingCart.wxss */
+/* 整个列表 */
+.cartList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* 图片 */
+.cartImg {
+    height: 200rpx;
+    width: 200rpx;
+}
+
+image {
+    width: 100%;
+}
+
+/* 中间产品名+单价 */
+.cartText {
+    height: 100rpx;
+    width: 150rpx;
+    display: flex;
+    flex-direction: column;
+    /* border: 1rpx solid; */
+    justify-content: center;
+    /* align-items: ; */
+}
+
+/* 加减数字按钮 */
+.cartBtns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.changeNumBtn{
+    /* border: 1rpx solid; */
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    background-color: #A8DADC;
+}
+/* 删除按钮 */
+.deleteBtn{
+    width: 50rpx;
+    height: 50rpx;
+}
+/* 底部栏 */
+.cartFooter{
+    width: 100%;
+    height: 100rpx;
+    border: 1px solid;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.selectedBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.selected{
+    width: 50rpx;
+}
+
+.selected image{
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.totalPrice{
+    /* border: 1rpx solid; */
+    width: 200rpx;
+    font-size:larger;
+    text-align: center;
+}

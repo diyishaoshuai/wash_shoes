@@ -1,0 +1,109 @@
+<!--pages/my/my.wxml-->
+<view class="content">
+    <!-- 头部 -->
+    <view class="head">
+        <view class="avatar">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="nickName">
+            <open-data type="userNickName"></open-data>
+        </view>
+    </view>
+    <view class="vipBox">
+        
+    </view>
+    <!-- 菜单组 -->
+    <view class="myBtns">
+        <view class="myBtn">
+            <view class="myBtnIcon ">
+                <image class="myBtnImg" src="../../img/icon_my_TobePickedUp.png" mode="widthFix" />
+            </view>
+            <view class="myBtnName">
+                待取货
+            </view>
+        </view>
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/icon_my_Warehousing.png" mode="widthFix" />
+
+            </view>
+            <view class="myBtnName">
+                入库中
+            </view>
+        </view>
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/icon_my_Cleaning.png" mode="widthFix" />
+
+            </view>
+            <view class="myBtnName">
+                清洗中
+            </view>
+        </view>
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/icon_my_inTransit.png" mode="widthFix" />
+
+            </view>
+            <view class="myBtnName">
+                运送中
+            </view>
+        </view>
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/icon_my_Completed.png" mode="widthFix" />
+
+            </view>
+            <view class="myBtnName">
+                已完成
+            </view>
+        </view>
+    </view>
+    <!-- 底部菜单栏 -->
+    <view class="footMenu myBtns">
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/icon_my_addressBook.png" mode="widthFix" />
+            </view>
+            <view class="myBtnName">
+                地址簿
+            </view>
+        </view>
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/icon_my_customerService.png" mode="widthFix" />
+
+            </view>
+            <view class="myBtnName">
+                客服
+            </view>
+        </view>
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/white.png" mode="widthFix" />
+
+            </view>
+            <view class="myBtnName">
+                
+            </view>
+        </view>
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/white.png" mode="widthFix" />
+
+            </view>
+            <view class="myBtnName">
+                
+            </view>
+        </view>
+        <view class="myBtn">
+            <view class="myBtnIcon">
+                <image class="myBtnImg" src="../../img/white.png" mode="widthFix" />
+
+            </view>
+            <view class="myBtnName">
+                
+            </view>
+        </view>
+    </view> 
+</view>

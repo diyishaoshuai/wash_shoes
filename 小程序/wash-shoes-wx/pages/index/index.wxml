@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+    <!-- 搜索框 -->
+    <SearchBar></SearchBar>
+    <!-- 获取地理位置 -->
+    <view class="getLocatioN">
+        <button>点击获取位置</button>
+    </view>
+    <!-- 轮播图 -->
+    <view class="carousel">
+        <swiper class="images" indicator-dots indicator-color="white" circular autoplay interval="3000">
+            <swiper-item wx:for="{{imagesSrc}}" wx:for-item="swiper" wx:key="images">
+                <image src="{{'http://localhost:8888/image/swiper/'+swiper.swiperPic}}" mode="widthFix" class="image"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 列表 -->
+    <view class="indexList" >   
+        <view class="indexListContent" wx:for="{{indexListcontent}}" wx:for-index="index" wx:key="shoes" data-index="{{index}}">
+            <view class="indexListContentImg">
+                <image src="{{indexListcontent[index].imgUrl}}" mode="widthFix" class="indexListContentImgContent" />
+            </view>
+            <view class="indexListRight">
+                <view class="indexListRightShosesName">
+                    {{indexListcontent[index].shoesName}}
+                </view>
+                <view class="indexListRightShosesPrice">
+
+                    <view class="indexListRightShosesPriceForFarmer">
+                        ￥{{indexListcontent[index].priceForFarmer}}
+                    </view>
+                    <view class="indexListRightShosesPriceForVip">
+                        ￥{{indexListcontent[index].priceForVip}} 会员价
+                    </view>
+                </view>
+            </view>
+            <view class="indexListBtns">
+                <view class="numSubBtn" bindtap="numSub" data-index="{{index}}">
+                    _
+                </view>
+                <view class="showNumBox">
+                    {{indexListcontent[index].num}}
+                </view>
+                <view class="numaddBtn" bindtap="numAdd" data-index="{{index}}">
+                    +
+                </view>
+                <!-- <num-input bindinput="onInput" value="{{ indexListcontent[index].num }}" size="s" step="1" />  -->
+            </view>
+        </view>
+    </view>
+    <tabbar></tabbar>
+</view>

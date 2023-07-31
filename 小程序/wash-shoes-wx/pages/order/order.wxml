@@ -1,0 +1,51 @@
+<view class="main">
+    <view class="orderTopNav">
+        <view class="toBePickedUp" bindtap="toBePickedUp_view" style="color: {{toBePickedUp_color}}; border-bottom: {{toBePickedUp_Line}};">
+            待取货
+        </view>
+        <view class="inStorage" bindtap="inStorage_view" style="color: {{inStorage_color}}; border-bottom: {{inStorage_Line}};">
+            入库中
+        </view>
+        <view class="Cleaning" bindtap="Cleaning_view" style="color: {{Cleaning_color}}; border-bottom: {{Cleaning_Line}};">
+            清洗中
+        </view>
+        <view class="inTransit" bindtap="inTransit_view" style="color: {{inTransit_color}}; border-bottom: {{inTransit_Line}};">
+            运送中
+        </view>
+        <view class="Completed" bindtap="Completed_view" style="color: {{Completed_color}}; border-bottom: {{Completed_Line}};">
+            已完成
+        </view>
+    </view>
+    <!-- 订单主体 -->
+    <view>
+        <view class="toBePickedUp_content order_content" hidden="{{toBePickedUp_content_view}}" wx:for="{{toBePickedUp}}" wx:key="order" wx:for-index="index" data-index="{{index}}">
+            <view class="order">
+                订单号:{{toBePickedUp[index].id}}
+            </view>
+            <view class="send">
+                客户名:{{toBePickedUp[index].send}}
+            </view>
+            <view class="departure">
+                取鞋点：{{toBePickedUp[index].departure}}
+            </view>
+            <view class="receive">
+                送至:{{toBePickedUp[index].receive}}
+            </view>
+            <button open-type="share" class="share" size="mini" catchtap>分享</button>
+
+        </view>
+        <view class="inStorage_content" hidden="{{inStorage_content_view}}" wx:for="inStorage" wx:key="order" wx:for-index="index" data-index="{{index}}">
+
+        </view>
+        <view class="Cleaning_content" hidden="{{Cleaning_content_view}}" wx:for="Cleaning" wx:key="order" wx:for-index="index" data-index="{{index}}">
+
+        </view>
+        <view class="inTransit_content" hidden="{{inTransit_content_view}}" wx:for="inTransit" wx:key="order" wx:for-index="index" data-index="{{index}}">
+
+        </view>
+        <view class="Completed_content" hidden="{{Completed_content_view}}" wx:for="Completed" wx:key="order" wx:for-index="index" data-index="{{index}}">
+
+        </view>
+    </view>
+
+</view>
