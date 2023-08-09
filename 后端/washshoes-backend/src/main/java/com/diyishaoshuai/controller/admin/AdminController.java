@@ -8,6 +8,7 @@ import com.diyishaoshuai.entity.R;
 import com.diyishaoshuai.service.IAdminService;
 import com.diyishaoshuai.util.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +30,7 @@ public class AdminController {
     private IAdminService adminService;
 
     //管理员登录
+    @PostMapping("/adminLogin")
     public R adminLogin(@RequestBody Admin admin){
         if (admin==null){
             return R.error();

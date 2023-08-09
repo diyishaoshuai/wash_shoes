@@ -3,11 +3,11 @@
     <h2>登 录 平 台</h2>
     <el-form ref="formRef" :model="form" :rules="rules">
       <div class="user-box">
-          <input type="text" v-model="form.username" name="" required="">
+        <input type="text" v-model="form.username" name="" required="">
         <label>用户名</label>
       </div>
       <div class="user-box">
-          <input type="password" v-model="form.password" name="" required="">
+        <input type="password" v-model="form.password" name="" required="">
         <label>密码</label>
       </div>
       <a @click="handleLogin">
@@ -25,36 +25,48 @@
 <script setup>
 import login_background from '@/components/login_background'
 import { ref } from 'vue'
+import axios from 'axios';
+import { ElMessage } from 'element-plus';
+// import { response } from 'express';
+import axiosUtil from "@/util/axios.js"
+
 const form = ref({
   username: "",
   password: ""
 })
 
 const rules = ref({
-   username:[
-    {required: true,message:"请输入用户名",trigger:"blur"}
-   ], 
-   password:[
-    {required: true,message:"请输入用户名",trigger:"blur"}
-   ],
+  username: [
+    { required: true, message: "请输入用户名", trigger: "blur" }
+  ],
+  password: [
+    { required: true, message: "请输入用户名", trigger: "blur" }
+  ],
 })
 
-const formRef=ref(null)
-const handleLogin=()=>{
-  formRef.value.validate(async (valid)=>{
-    if(valid){
-      console.log("验证成功")
-    }else{
+const formRef = ref(null)
+const handleLogin = () => {
+  formRef.value.validate(async (valid) => {
+    if (valid) {
+      axios.post("http://localhost:888/dev-api/adminLogin",form.value)
+        .then(response => {
+          console.log(response.data)
+        }).catch(error => {
+          ElMessage.error("系统运行出错，请联系管理员")
+        })
+      // let result = await axiosUtil.post("adminLogin", form.value)
+      // console.log(result.data)
+    } else {
       console.log("验证失败")
     }
   })
 }
 
 function isEmpty(s) {
-	if (s == null || s === '') {
-		return true
-	}
-	return false
+  if (s == null || s === '') {
+    return true
+  }
+  return false
 }
 
 
